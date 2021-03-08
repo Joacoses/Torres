@@ -8,7 +8,6 @@ namespace Torres_de_Hanoi
 {
     class Pila
     {
-        //hola
         public int Size { get; set; }
         /* TODO: Elegir tipo de Top
         public int Top { get; set; }
