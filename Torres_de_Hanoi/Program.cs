@@ -8,12 +8,44 @@ namespace Torres_de_Hanoi
 {
     class Program
     {
+
         static void Main(string[] args)
         {
+
+            Disco peque = new Disco(1);
+            Disco medio = new Disco(2);
+            Disco grande = new Disco(3);
+
+            Pila ini = new Pila();
+            ini.push(grande);
+            ini.push(medio);
+            ini.push(peque);
+            Pila aux = new Pila();
+            Pila fin = new Pila();
+
+            Hanoi nuevoHanoi = new Hanoi();
+            //ini-->fin
+            //ini-->aux
+            //fin-->aux
+            //ini-->fin
+            //aux-->ini
+            //aux-->fin
+            //ini-->fin
+
+            var res = nuevoHanoi.iterativo(7, ini, aux, fin);
+            Console.WriteLine(res);
+
+
+            var resultado0 = ini.peek();
+            Console.WriteLine(resultado0);
+            var resultado1 = aux.peek();
+            Console.WriteLine(resultado1);
+            var resultado2 = fin.peek();
+            Console.WriteLine(resultado2);
 
             // Keep the console window open in debug mode.
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
-    }
+    }//program
 }

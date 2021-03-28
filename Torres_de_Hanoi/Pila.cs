@@ -19,14 +19,31 @@ namespace Torres_de_Hanoi
         */
 
         /* TODO: Implementar métodos */
+
+
+        public Stack<Disco> torre = new Stack<Disco>();
         public Pila()
         {
 
         }
 
+        public int size()
+        {
+            return torre.Count;
+        }
+
         public void push(Disco d)
         {
 
+        }
+        public int peek()
+        {
+
+            if (torre.Count == 0)
+            {
+                return 99;
+            }
+            return torre.Peek().getValor();
         }
 
         public Disco pop()
@@ -38,6 +55,8 @@ namespace Torres_de_Hanoi
         {
             return true;
         }
+
+        
 
     }
 }
